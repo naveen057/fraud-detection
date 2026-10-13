@@ -1,0 +1,10 @@
+# Render Blueprint – deploy with: New + > Blueprint > select this repo
+services:
+  - type: web
+    name: fraud-detection-api
+    runtime: docker
+    plan: free
+    healthCheckPath: /health
+    envVars:
+      - key: LATENCY_SLA_MS
+        value: "50"

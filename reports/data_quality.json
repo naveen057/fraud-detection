@@ -1,0 +1,33 @@
+{
+  "raw_rows": 101646,
+  "missing_values": 0,
+  "duplicate_rows_removed": 0,
+  "non_positive_amounts_removed": 0,
+  "processed_rows": 101646,
+  "n_users": 2500,
+  "date_range": [
+    "2025-01-01 00:04:19.072482617",
+    "2025-03-01 23:59:59.644583127"
+  ],
+  "fraud_count": 1610,
+  "fraud_rate_pct": 1.584,
+  "imbalance_ratio": "1 : 62",
+  "columns": [
+    "transaction_id",
+    "user_id",
+    "timestamp",
+    "amount",
+    "hour",
+    "merchant_category",
+    "channel",
+    "is_foreign",
+    "device_new",
+    "distance_from_home_km",
+    "account_age_days",
+    "txn_count_1h",
+    "txn_count_24h",
+    "avg_amount_30d",
+    "time_since_last_txn_min",
+    "is_fraud"
+  ]
+}

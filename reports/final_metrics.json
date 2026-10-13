@@ -1,0 +1,116 @@
+{
+  "boosting_backend": "sklearn-hist-gb-fallback",
+  "smote_backend": "numpy-fallback",
+  "winner": {
+    "model": "XGBoost*",
+    "strategy": "class_weight",
+    "params": {
+      "min_samples_leaf": 50,
+      "max_leaf_nodes": 31,
+      "max_iter": 250,
+      "max_depth": 3,
+      "learning_rate": 0.05,
+      "l2_regularization": 0.0
+    }
+  },
+  "candidates": [
+    {
+      "model": "XGBoost*",
+      "strategy": "class_weight",
+      "cv_pr_auc": 0.651100545886608,
+      "val_pr_auc": 0.673193463234941
+    },
+    {
+      "model": "XGBoost*",
+      "strategy": "smote",
+      "cv_pr_auc": 0.651100545886608,
+      "val_pr_auc": 0.6671001549416461
+    },
+    {
+      "model": "Random Forest",
+      "strategy": "class_weight",
+      "cv_pr_auc": 0.6425657812682513,
+      "val_pr_auc": 0.6568596894485044
+    },
+    {
+      "model": "Random Forest",
+      "strategy": "smote",
+      "cv_pr_auc": 0.6425657812682513,
+      "val_pr_auc": 0.6648253359751906
+    }
+  ],
+  "threshold": {
+    "selected": 0.31,
+    "f1_optimal": 0.713158515313039,
+    "review_cost_per_alert": 5.0
+  },
+  "test": {
+    "default_0.5": {
+      "threshold": 0.5,
+      "pr_auc": 0.6479694607482164,
+      "roc_auc": 0.8894337367374188,
+      "precision": 0.6533333333333333,
+      "recall": 0.6049382716049383,
+      "f1": 0.6282051282051282,
+      "tp": 147,
+      "fp": 78,
+      "fn": 96,
+      "tn": 14926,
+      "alert_rate": 0.014757001377320129,
+      "business_cost": 7817.4
+    },
+    "f1_optimal": {
+      "threshold": 0.713158515313039,
+      "pr_auc": 0.6479694607482164,
+      "roc_auc": 0.8894337367374188,
+      "precision": 0.8823529411764706,
+      "recall": 0.5555555555555556,
+      "f1": 0.6818181818181819,
+      "tp": 135,
+      "fp": 18,
+      "fn": 108,
+      "tn": 14986,
+      "alert_rate": 0.010034760936577687,
+      "business_cost": 8898.77
+    },
+    "cost_optimal": {
+      "threshold": 0.31,
+      "pr_auc": 0.6479694607482164,
+      "roc_auc": 0.8894337367374188,
+      "precision": 0.3979591836734694,
+      "recall": 0.6419753086419753,
+      "f1": 0.4913385826771654,
+      "tp": 156,
+      "fp": 236,
+      "fn": 87,
+      "tn": 14768,
+      "alert_rate": 0.02570997573293107,
+      "business_cost": 7705.569999999999
+    }
+  },
+  "test_n": 15247,
+  "test_fraud_n": 243,
+  "test_cost_if_no_model": 33883.85,
+  "latency": {
+    "single_p50_ms": 4.971273000023757,
+    "single_p95_ms": 7.922716950008635,
+    "single_p99_ms": 8.577816000090477,
+    "single_mean_ms": 5.154133783332782,
+    "batch_1000_total_ms": 12.767540999902849,
+    "batch_throughput_tps": 78323.61768077417
+  },
+  "permutation_importance": {
+    "distance_from_home_km": 0.25926,
+    "amount": 0.1368,
+    "merchant_category": 0.0615,
+    "device_new": 0.05703,
+    "hour": 0.0372,
+    "avg_amount_30d": 0.02328,
+    "time_since_last_txn_min": 0.01578,
+    "channel": 0.0152,
+    "is_foreign": 0.01299,
+    "txn_count_1h": 0.00066,
+    "txn_count_24h": 2e-05,
+    "account_age_days": -0.00079
+  }
+}

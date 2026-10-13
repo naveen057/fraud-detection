@@ -1,0 +1,6 @@
+{
+  "boosting_backend": "sklearn-hist-gb-fallback",
+  "smote_backend": "numpy-fallback",
+  "train_fraud_rate": 0.016050146165954578,
+  "val_fraud_rate": 0.014757001377320129
+}

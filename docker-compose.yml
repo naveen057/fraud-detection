@@ -1,0 +1,9 @@
+services:
+  fraud-api:
+    build: .
+    image: fraud-detection-api:latest
+    ports:
+      - "8000:8000"
+    environment:
+      - LATENCY_SLA_MS=50
+    restart: unless-stopped
