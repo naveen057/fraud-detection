@@ -44,6 +44,9 @@ app = FastAPI(
     description="Scores card transactions with a tuned gradient-boosting / random-forest model.",
     version="1.0.0", lifespan=lifespan)
 
+@app.get("/healthz")
+def health_check():
+    return {"status": "healthy"}
 
 @app.get("/", include_in_schema=False, name="home")
 def home(request: Request):
